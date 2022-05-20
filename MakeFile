@@ -1,0 +1,5 @@
+PROTO_DIR=proto
+PACKAGE=go-mongo/proto
+
+protoc -I $@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. \
+$@/${PROTO_DIR}/*.proto
